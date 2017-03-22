@@ -4,7 +4,9 @@ var cleanCSS = require('gulp-clean-css');
 
 gulp.task('styles', function() {
     gulp.src('sass/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+          includePaths: require('node-normalize-scss').includePaths
+        }).on('error', sass.logError))
         .pipe(gulp.dest('./css/'));
 });
 

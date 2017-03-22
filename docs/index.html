@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netshow.me CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 30px 0 30px;
+    }
+    .topic {
+      margin-bottom: 40px;
+    }
+    .title {
+      color: #000;
+      font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      margin-bottom: 15px;
+    }
+    h1.title {
+      font-size: 32px;
+    }
+    .content {
+      border: 3px solid #f7f7f9;
+      padding: 20px;
+    }
+    .content-pre {
+      background: #f7f7f9;
+      padding: 20px;
+    }
+    .highlighted {
+      background: #eee;
+      font-family: "Helvetica Neue",Arial,sans-serif;
+      font-weight: 200;
+      padding: 0 5px;
+      color: #1fa9e0;
+    }
+    .table {
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+    .table th,
+    .table td {
+      border: 1px solid #eceeef;
+    }
+  </style>
+</head>
+<body>
+  <div class="nsm-container">
+    <div class="topic">
+      <h1 class="title">TOC</h1>
+      <ul>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#heading">Heading</a></li>
+        <li><a href="#hr">Tag &lt;hr&gt;</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h1 id="dependencies" class="title">Dependencies</h1>
+      <ul>
+        <li>
+          Normalize CSS (http://necolas.github.io/normalize.css/)
+        </li>
+        <li>
+          BEM css naming (http://getbem.com/naming/)
+        </li>
+      </ul>
+    </div>
+
+    <div class="topic">
+      <h1 id="heading" class="title">Heading</h1>
+      <div class="content">
+        <h1>h1. Netshow.me heading</h1>
+        <h2>h2. Netshow.me heading</h2>
+        <h3>h3. Netshow.me heading</h3>
+        <h4>h4. Netshow.me heading</h4>
+        <h5>h5. Netshow.me heading</h5>
+        <h6>h6. Netshow.me heading</h6>
+      </div>
+      <pre class="content-pre">&lt;h1&gt;h1. Netshow.me heading&lt;/h1&gt;<br/>&lt;h2&gt;h2. Netshow.me heading&lt;/h2&gt;<br/>&lt;h3&gt;h3. Netshow.me heading&lt;/h3&gt;<br/>&lt;h4&gt;h4. Netshow.me heading&lt;/h4&gt;<br/>&lt;h5&gt;h5. Netshow.me heading&lt;/h5&gt;<br/>&lt;h6&gt;h6. Netshow.me heading&lt;/h6&gt;</pre>
+    </div>
+
+    <div class="topic">
+      <h1 id="hr" class="title">Tag &lt;hr&gt;</h1>
+      <div class="content">
+        <hr></hr>
+      </div>
+      <pre class="content-pre">&lt;hr&gt;&lt;/hr&gt;</pre>
+    </div>
+
+    <div class="topic">
+      <h1 id="grid" class="title">Grid</h1>
+      <p>
+        Netshow.me grid system uses a series of containers, rows, and columns to
+        layout and align content. It’s built with flexbox and is fully responsive.
+      </p>
+      <h2 class="title">Container</h2>
+      <p>
+        Containers provide a means to center your site’s contents. Use without
+        modifier for fixed width or <span class="highlighted">.nsm-container--fluid</span> for full width.
+      </p>
+      <div class="content">
+        <div class="nsm-container" style="border:1px solid black;"><br /></div>
+      </div>
+      <pre class="content-pre">&lt;div class=&quot;nsm-container&quot;&gt;&lt;/div&gt;</pre>
+      <h2 class="title">Grid</h2>
+      <p>
+        <ul>
+          <li>
+            Rows are horizontal groups of columns that ensure your columns are lined up properly.
+            We use the negative margin method on <span class="highlighted">.nsm-g</span> to ensure
+            all your content is aligned properly down the left side.
+          </li>
+          <li>
+            Content should be placed within columns, and only columns may be immediate children of rows.
+          </li>
+          <li>
+            Column classes indicate the number of columns you’d like to use out of the possible 12 per
+            row. So, if you want three equal-width columns, you can use <span class="highlighted">.nsm-g__col-4</span>.
+          </li>
+          <li>
+            Column widths are set in percentages, so they’re always fluid and sized relative to their
+            parent element.
+          </li>
+          <li>
+            Columns have horizontal padding to create the gutters between individual columns.
+          </li>
+        </ul>
+      </p>
+      <div class="content">
+        <div class="nsm-container">
+          <div class="nsm-g">
+            <div class="nsm-g__col-12" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 1</div>
+          </div>
+          <div class="nsm-g">
+            <div class="nsm-g__col-6" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 2</div>
+            <div class="nsm-g__col-6" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 2</div>
+          </div>
+          <div class="nsm-g">
+            <div class="nsm-g__col-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+            <div class="nsm-g__col-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+            <div class="nsm-g__col-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+          </div>
+          <div class="nsm-g">
+            <div class="nsm-g__col-3" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 4</div>
+            <div class="nsm-g__col-3" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 4</div>
+            <div class="nsm-g__col-3" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 4</div>
+            <div class="nsm-g__col-3" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 4</div>
+          </div>
+          <div class="nsm-g">
+            <div class="nsm-g__col-2" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">2/12 of full</div>
+            <div class="nsm-g__col-10" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">10/12 of full</div>
+          </div>
+          <div class="nsm-g">
+            <div class="nsm-g__col-3" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">3/12 of full</div>
+            <div class="nsm-g__col-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">4/12 of full</div>
+            <div class="nsm-g__col-5" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">5/12 of full</div>
+          </div>
+        </div>
+      </div>
+      <pre class="content-pre">&lt;div class=&quot;nsm-container&quot;&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-12&quot;&gt;1 of 1&lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-6&quot;&gt;1 of 2&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-6&quot;&gt;1 of 2&lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-4&quot;&gt;1 of 3&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-4&quot;&gt;1 of 3&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-4&quot;&gt;1 of 3&lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-3&quot;&gt;1 of 4&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-3&quot;&gt;1 of 4&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-3&quot;&gt;1 of 4&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-3&quot;&gt;1 of 4&lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-2&quot;&gt;2/12 of full&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-10&quot;&gt;10/12 of full&lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;nsm-g&quot;&gt;<br/>    &lt;div class=&quot;nsm-g__col-3&quot;&gt;3/12 of full&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-4&quot;&gt;4/12 of full&lt;/div&gt;<br/>    &lt;div class=&quot;nsm-g__col-5&quot;&gt;5/12 of full&lt;/div&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+      <h2 class="title">Responsive Grid</h2>
+      <p>
+        <ul>
+          <li>
+            There are five grid tiers, one for each responsive breakpoint: all
+            breakpoints (extra small), small, medium, large, and extra large.
+          </li>
+          <li>
+            Grid tiers are based on minimum widths, meaning they apply to that
+            one tier and all those above it (e.g., <span class="highlighted">
+            .nsm-g__col-sm-4</span> applies to small, medium, large, and extra large devices).
+          </li>
+        </ul>
+      </p>
+      <table class="nsm-table table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Extra small (&lt;544px)</th>
+            <th>Small (≥544px)</th>
+            <th>Medium (≥768px)</th>
+            <th>Large (≥992px)</th>
+            <th>Extra (≥1200px)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Class prefix
+            </td>
+            <td>
+              .nsm-g__col-
+            </td>
+            <td>
+              .nsm-g__col--sm-
+            </td>
+            <td>
+              .nsm-g__col--md-
+            </td>
+            <td>
+              .nsm-g__col--lg-
+            </td>
+            <td>
+              .nsm-g__col--xl-
+            </td>
+          </tr>
+          <tr>
+            <td>
+              # of columns
+            </td>
+            <td colspan="5">
+              12
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gutter width
+            </td>
+            <td colspan="5">
+              30px (15px on each side of a column)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Don’t want your columns to simply stack in some grid tiers? Use a
+        combination of different classes for each tier as needed. See the example
+        below for a better idea of how it all works
+      </p>
+      <div class="content">
+        <div class="nsm-container">
+          <div class="nsm-g">
+            <div class="nsm-g__col-6 nsm-g__col--md-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+            <div class="nsm-g__col-6 nsm-g__col--md-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+            <div class="nsm-g__col-6 nsm-g__col--md-4" style="border:1px solid rgba(86,61,124,.2);padding-top: 10px;padding-bottom: 10px;">1 of 3</div>
+          </div>
+        </div>
+      </div>
+      <pre class="content-pre">&lt;div class=&quot;nsm-g__col-6 nsm-g__col--md-4&quot;&gt;1 of 3&lt;/div&gt;<br/>&lt;div class=&quot;nsm-g__col-6 nsm-g__col--md-4&quot;&gt;1 of 3&lt;/div&gt;<br/>&lt;div class=&quot;nsm-g__col-6 nsm-g__col--md-4&quot;&gt;1 of 3&lt;/div&gt;</pre>
+    </div>
+
+    <div class="topic">
+      <h1 id="buttons" class="title">Buttons</h1>
+      <h2 class="title">Button tag</h2>
+      <div class="content">
+        <btn class="nsm-btn">Button</btn>
+      </div>
+      <pre class="content-pre">&lt;btn class=&quot;nsm-btn&quot;&gt;Button&lt;/btn&gt;</pre>
+      <h2 class="title">Buttons with color</h2>
+      <div class="content">
+        <btn class="nsm-btn nsm-btn--blue">Button</btn>
+        <btn class="nsm-btn nsm-btn--green">Button</btn>
+        <btn class="nsm-btn nsm-btn--red">Button</btn>
+        <btn class="nsm-btn nsm-btn--facebook">Button</btn>
+        <btn class="nsm-btn nsm-btn--twitter">Button</btn>
+      </div>
+      <pre class="content-pre">&lt;btn class=&quot;nsm-btn nsm-btn--blue&quot;&gt;Button&lt;/btn&gt;<br/>&lt;btn class=&quot;nsm-btn nsm-btn--green&quot;&gt;Button&lt;/btn&gt;<br/>&lt;btn class=&quot;nsm-btn nsm-btn--red&quot;&gt;Button&lt;/btn&gt;<br/>&lt;btn class=&quot;nsm-btn nsm-btn--facebook&quot;&gt;Button&lt;/btn&gt;<br/>&lt;btn class=&quot;nsm-btn nsm-btn--twitter&quot;&gt;Button&lt;/btn&gt;</pre>
+      <h2 class="title">Button disabled</h2>
+      <div class="content">
+        <a class="nsm-btn nsm-btn--blue">Button</a>
+        <a class="nsm-btn nsm-btn--blue nsm-btn--disabled">Button</a>
+      </div>
+      <pre class="content-pre">&lt;a class=&quot;nsm-btn nsm-btn--blue&quot;&gt;Button&lt;/a&gt;<br/>&lt;a class=&quot;nsm-btn nsm-btn--blue nsm-btn--disabled&quot;&gt;Button&lt;/a&gt;</pre>
+    </div>
+  </div>
+</body>
+</html
