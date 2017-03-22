@@ -1,0 +1,16 @@
+// Responsive classes
+//
+
+@each $bp in map-keys($grid-breakpoints) {
+  .nsm-r-hidden-#{$bp}-up {
+    @include media-breakpoint($bp) {
+      display: none !important;
+    }
+  }
+
+  .nsm-r-hidden-#{$bp}-down {
+    @include media-breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}

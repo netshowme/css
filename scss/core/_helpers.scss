@@ -1,0 +1,16 @@
+// Helpers
+//
+// NOTE - verificar real necessidade dessas classes o ideal é que esses estilos
+// sejam aplicados via classes específicas dos elementos
+
+.nsm-h-overflow-hidden {
+  overflow: hidden;
+}
+
+.nsm-h-color-red {
+  color: $red;
+}
+
+.nsm-h-color-green {
+  color: $green;
+}

@@ -1,0 +1,19 @@
+// Type
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: inherit;
+  color: $black-title;
+  line-height: 1.1;
+}
+
+hr {
+  border: 0;
+  border-top: rem(1) solid $gray-border;
+}

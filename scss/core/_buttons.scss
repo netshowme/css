@@ -1,0 +1,42 @@
+// Buttons
+//
+
+%button-default {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  padding: rem(14) rem(20);
+  line-height: 1;
+}
+
+.nsm-btn {
+  @extend %button-default;
+}
+
+.nsm-btn--disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.nsm-btn--blue {
+  @include button-variant($white, $blue, $blue-hover);
+}
+
+.nsm-btn--green {
+  @include button-variant($white, $green, $green-hover);
+}
+
+.nsm-btn--red {
+  @include button-variant($white, $red, $red-hover);
+}
+
+.nsm-btn--facebook {
+  @include button-variant($white, $facebook, $facebook-hover);
+}
+
+.nsm-btn--twitter {
+  @include button-variant($white, $twitter, $twitter-hover);
+}

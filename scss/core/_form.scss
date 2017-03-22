@@ -1,0 +1,108 @@
+// Form
+//
+
+.nsm-form {
+  img {
+    margin-bottom: rem(15);
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(25);
+
+    > label { margin-bottom: rem(15); }
+
+    abbr { display: none; }
+  }
+
+  .check-box-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(10);
+
+    > label { margin-bottom: rem(15); }
+    input { margin-right: rem(10); }
+  }
+
+  input.string,
+  input.password,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: rem(1) solid $gray-border;
+    background: $white;
+    padding: rem(10) rem(15);
+
+    &:focus {
+      border-color: $blue;
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: rem(100);
+  }
+
+  input.radio_buttons {
+    margin-right: rem(10);
+  }
+
+  input.disabled {
+    color: $gray-icon;
+    background: $gray-background;
+  }
+
+  .hint {
+    margin-top: rem(-5);
+    margin-bottom: rem(15);
+    font-size: rem(12);
+    color: $gray-icon;
+  }
+
+  .error {
+    font-size: rem(12);
+    color: $red;
+  }
+
+  .field-hint {
+    display: flex;
+
+    span {
+      display: flex;
+      align-items: center;
+      color: $gray-icon;
+      background: $gray-background;
+      border: rem(1) solid $gray-border;
+      border-right: 0;
+      padding: 0 rem(15);
+      font-size: rem(12);
+    }
+
+    input.string {
+      flex: 1;
+      border-left: 0
+    }
+  }
+
+  .input-image {
+    position: relative;
+    align-self: flex-start;
+
+    input {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // customize thirds
+  .xdsoft_datetimepicker {
+    align-self: flex-start;
+    z-index: 1;
+  }
+}

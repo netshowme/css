@@ -1,0 +1,15 @@
+// Icons
+//
+// NOTE - essas classes são feitas para usar ícones que não existam via fa ou
+// elusive, nesse caso os ícones são imagens e não fonte
+
+.nsm-icon {
+  display: inline-block;
+}
+
+.nsm-icon--gcal {
+  width: rem(20);
+  height: rem(18);
+  background: asset-url('nsm-icon-gcal.png') no-repeat;
+  vertical-align: sub;
+}

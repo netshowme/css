@@ -1,0 +1,56 @@
+// Variables
+//
+
+// Colors
+$white: #fff;
+$black: #000;
+$blue: #1fa9e0;
+$blue-hover: #169dd2;
+$black-title: #424242;
+$black-text: #424242;
+$black-footer: #262626;
+$black-footer-border: #3c3c3c;
+$gray-border: #dcdcdc;
+$gray-background: #f6f6f6;
+$gray-icon: #a5a5a5;
+$gray-icon-hover: #7d7d7d;
+$green: #1fdf75;
+$green-hover: #36d57d;
+$red: #fd3a2c;
+$red-hover: #fc5145;
+$facebook: #4267b2;
+$facebook-hover: #365899;
+$twitter: #55acee;
+$twitter-hover: #1B95E0;
+
+// Breakpoints
+$grid-breakpoints: (
+  // Small screen / phone
+  sm: 34rem,
+  // Medium screen / tablet -- designed
+  md: 48rem,
+  // Large screen / desktop
+  lg: 62rem,
+  // Extra large screen / wide desktop -- designed
+  xl: 75rem
+);
+
+// Grid settings
+$grid-columns: 12;
+$grid-gutter-width: 1.875rem;
+$container-max-width: 73.125rem;
+
+// Font
+$font-size-root: 16px;
+$font-size-base: .875rem;
+$font-family-base: 'Open Sans', sans-serif;
+$line-height: 1.5;
+
+// Elements color
+$body-bg: #fff;
+$body-color: $black-text;
+$link-color: $blue;
+$link-hover-color: $blue-hover;
+$footer-bg: $black-footer;
+$footer-border: $black-footer-border;
+$board-bg: $black-footer;

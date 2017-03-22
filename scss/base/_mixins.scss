@@ -1,0 +1,93 @@
+// Mixins
+//
+
+// Breakpoints
+@mixin media-breakpoint($name) {
+  @media (min-width: map-get($grid-breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  @media (max-width: map-get($grid-breakpoints, $name) - 0.1) {
+    @content;
+  }
+}
+
+// Mixin to use rem
+@function rem($px) {
+  @if (unitless($px)) {
+    $px: $px * 1px;
+  }
+
+  @return #{$px/$font-size-root}rem;
+}
+
+// Clearfix
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Grid
+@mixin make-grid($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+@mixin make-column($gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  word-break: break-word;
+  min-width: 0;
+}
+
+@mixin make-grid-columns {
+  @for $i from 1 through $grid-columns {
+    .nsm-g__col-#{$i} {
+      @include make-column;
+      flex: 0 0 percentage($i / $grid-columns);
+    }
+  }
+}
+
+@mixin make-grid-columns-breakpoints {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint($breakpoint) {
+      @for $i from 1 through $grid-columns {
+        .nsm-g__col--#{$breakpoint}-#{$i} {
+          flex: 0 0 percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+}
+
+// Button
+@mixin button-variant($color, $background, $hover) {
+  color: $color;
+  background-color: $background;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color;
+    background-color: $hover;
+  }
+
+  &.nsm-btn--disabled:hover {
+    color: $color;
+    background: $background !important;
+  }
+}

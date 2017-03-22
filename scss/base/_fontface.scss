@@ -1,0 +1,82 @@
+// Fontface
+//
+
+@font-face {
+  font-family: 'Open Sans';
+  src: font_url('OpenSans-Light-webfont.eot');
+  src: font_url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('OpenSans-Light-webfont.woff') format('woff'),
+       font_url('OpenSans-Light-webfont.ttf') format('truetype'),
+       font_url('OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: font_url('OpenSans-Regular-webfont.eot');
+  src: font_url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('OpenSans-Regular-webfont.woff') format('woff'),
+       font_url('OpenSans-Regular-webfont.ttf') format('truetype'),
+       font_url('OpenSans-Regular-webfont.svg#OpenSans') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: font_url('OpenSans-Semibold-webfont.eot');
+  src: font_url('OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('OpenSans-Semibold-webfont.woff') format('woff'),
+       font_url('OpenSans-Semibold-webfont.ttf') format('truetype'),
+       font_url('OpenSans-Semibold-webfont.svg#OpenSansSemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: font_url('OpenSans-Bold-webfont.eot');
+  src: font_url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('OpenSans-Bold-webfont.woff') format('woff'),
+       font_url('OpenSans-Bold-webfont.ttf') format('truetype'),
+       font_url('OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Korolev';
+  src: font_url('korolev_bold-webfont.eot');
+  src: font_url('korolev_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('korolev_bold-webfont.woff2') format('woff2'),
+       font_url('korolev_bold-webfont.woff') format('woff'),
+       font_url('korolev_bold-webfont.ttf') format('truetype'),
+       font_url('korolev_bold-webfont.svg#korolevbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Korolev';
+  src: font_url('korolev_bold_italic-webfont.eot');
+  src: font_url('korolev_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('korolev_bold_italic-webfont.woff2') format('woff2'),
+       font_url('korolev_bold_italic-webfont.woff') format('woff'),
+       font_url('korolev_bold_italic-webfont.ttf') format('truetype'),
+       font_url('korolev_bold_italic-webfont.svg#korolevbold') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'KorolevMedium';
+  src: font_url('korolev_medium_italic-webfont.eot');
+  src: font_url('korolev_medium_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       font_url('korolev_medium_italic-webfont.woff2') format('woff2'),
+       font_url('korolev_medium_italic-webfont.woff') format('woff'),
+       font_url('korolev_medium_italic-webfont.ttf') format('truetype'),
+       font_url('korolev_medium_italic-webfont.svg#korolevbold') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}

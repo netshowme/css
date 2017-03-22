@@ -1,0 +1,27 @@
+// Grid
+//
+
+.nsm-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  @include clearfix();
+
+  @include media-breakpoint(xl) {
+    max-width: $container-max-width;
+
+    //@at-root #{&}--fluid {
+    @at-root #{&}--fluid {
+      max-width: none;
+    }
+  }
+}
+
+.nsm-g {
+  @include make-grid;
+}
+
+@include make-grid-columns;
+
+@include make-grid-columns-breakpoints;

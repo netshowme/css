@@ -1,0 +1,302 @@
+// Legacy
+//
+// NOTE - classes e estilo usados em algumas partes do sistema que não foram
+// migrados ainda, ideal é remover e aplicar no padrão novo
+
+.hidden {
+  display: none;
+}
+
+// NOTE - estilo dos botões de seguir do canal
+
+.nsm-channel-buttons__follow {
+  vertical-align: top;
+  padding: rem(.72*14) rem(1.42*14);
+  display: inline-block;
+  background-color: #FFF;
+  color: #202020;
+  border: rem(1) solid #DCDCDC;
+  text-align: left;
+
+  .fa-heart, fa-clock-o {
+    font-size: rem(1.14*14);
+    letter-spacing: rem(-11);
+    color: #1fa9e0;
+  }
+
+  .fa-bolt {
+    display: none;
+    font-size: rem(1.04*14);
+    color: white;
+  }
+}
+
+.nsm-channel-buttons__follow:hover {
+  color: #202020;
+  background-color: #F6F6F6;
+}
+
+.nsm-channel-buttons__icons {
+  width: rem(16);
+  float: left;
+  margin-right: rem(0.57*14);
+}
+
+.nsm-channel-buttons__follow--following {
+  padding: rem(.72*14) rem(.85*14) rem(.72*14) rem(1.42*14) !important;
+  border-color: #1FDF75 !important;
+  background-color: #1FDF75 !important;
+
+  .fa-credit-card,
+  .fa-heart {
+    color: #FFF !important;
+  }
+}
+
+.nsm-channel-buttons__follow--following:hover {
+  border-color: #FD3A2C !important;
+  background-color: #FD3A2C !important;
+
+  .fa-bolt {
+    display: inline-block !important;
+    color: #FD3A2C !important;
+  }
+}
+
+// NOTE - estilo do player
+
+.nsm-player {
+  margin: 0 -20px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.nsm-player__container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nsm-player__inside {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.nsm-player__video {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.nsm-player__content {
+  top: 0;
+  left: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.nsm-player__live, .nsm-player__audience {
+  position: absolute;
+  right: 1.14rem;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1rem;
+  z-index: 1;
+  border-radius:4px;
+  width: 5rem;
+  text-align: center;
+  padding: .29rem 0;
+}
+
+.nsm-player__live {
+  top: 1.14rem;
+  background: #E32323;
+}
+
+.nsm-player__audience{
+  top: 3rem;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.6);
+
+  & > i {
+    margin-right: 5px;
+  }
+}
+
+.nsm-player__cover {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    margin-bottom: 1.1rem;
+
+    .fa-lock {
+      font-size: 1.7rem;
+      vertical-align: sub;
+      margin-right: 8px;
+    }
+
+    .fa-info-circle {
+      font-size: 1.2rem;
+      margin-left: 8px;
+      color: #A5A5A5;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+}
+
+.nsm-player__cover--wheader {
+  justify-content: flex-start;
+}
+
+.nsm-player-cover__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nsm-player-cover-header__date {
+  margin-left: 1rem;
+  padding-top: .7rem;
+
+  .fa {
+    font-size: 1.2rem;
+    margin-right: 4px;
+  }
+}
+
+.nsm-player-cover-header__counter {
+  padding-top: .7rem;
+  margin-right: 1rem;
+
+  .count-number {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 3px;
+    display: inline-block;
+    text-align: center;
+    background: #373737;
+  }
+
+  [data-time] {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: attr(data-time);
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 100%;
+      text-align: center;
+      font-size: 9px;
+      color: #a2a2a2;
+      padding-right: 9px;
+    }
+
+    &:after {
+      content: ':';
+      display: inline-block;
+      position: relative;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+  }
+
+  #countdown-messages {
+    display: none;
+    padding-right: 3rem;
+  }
+}
+
+.nsm-player-cover__rest {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nsm-player-cover__indicated {
+  padding: 0 1rem;
+  display: flex;
+}
+
+.nsm-player-cover-indicated__concert {
+  padding-right: 1rem;
+  flex: 1;
+
+  img {
+    margin-bottom: .4rem;
+    width: 100%;
+  }
+
+  p, h2 {
+    text-align: left;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: .3rem;
+
+    a {
+      color: #FFF;
+      font-size: .65rem;
+    }
+  }
+
+  p a {
+    color: #A5A5A5;
+    font-size: .6rem;
+  }
+
+  a:hover { color: #1FA9E0; }
+}
+
+.nsm-player-cover-indicated__concert:last-child {
+  padding-right: 0;
+}
+
+.nsm-player-cover-indicated-concert__date {
+  font-size: .624rem;
+  margin-bottom: .4rem;
+
+  .fa { margin-right: 4px; }
+}
+
+// NOTE - css para rodar spin qndo chat social for selecionado
+
+.refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
